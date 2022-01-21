@@ -93,7 +93,7 @@ extension LoginViewController {
             configureView(withMessage: "Username / Password cannot be blank")
             return
         }
-        if username == "User" && password == "welcom" {
+        if username == "User" && password == "welcome" {
             signInButton.configuration?.showsActivityIndicator = true
         } else {
             configureView(withMessage: "Incorrect Username / Password")
