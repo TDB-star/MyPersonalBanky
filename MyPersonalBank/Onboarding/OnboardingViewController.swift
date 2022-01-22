@@ -13,8 +13,8 @@ class OnboardingViewController: UIViewController {
     let imageView = UIImageView()
     let label = UILabel()
     
-    var heroImageName: String
-    var titleText: String 
+    let heroImageName: String
+    let titleText: String
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,14 +42,14 @@ extension OnboardingViewController {
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
-        stackView.spacing = 20
+        stackView.spacing = 0
         
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
-        label.font = UIFont.preferredFont(forTextStyle: .title3)
+        label.font = UIFont.preferredFont(forTextStyle: .body)
         label.adjustsFontForContentSizeCategory = true
         label.numberOfLines = 0
-        label.text = titleText//"MyPersonalBank is faster, easier to use, and has a brand new look"
+        label.text = titleText
         
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -68,6 +68,7 @@ extension OnboardingViewController {
             stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             stackView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 2),
             view.trailingAnchor.constraint(equalToSystemSpacingAfter: stackView.trailingAnchor, multiplier: 2)
+            //view.bottomAnchor.constraint(equalToSystemSpacingBelow: stackView.bottomAnchor, multiplier: 2)
         ])
     }
 }
