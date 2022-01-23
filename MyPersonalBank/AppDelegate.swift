@@ -28,7 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         onboardingContainerViewController.delegate = self
         dummyViewController.logoutDelegate = self
         
-        window?.rootViewController = mainViewController
+        window?.rootViewController = AccountSummaryViewController()
+       // window?.rootViewController = mainViewController
         //window?.rootViewController = onboardingContainerViewController
         //window?.rootViewController = OnboardingViewController(heroImageName: "001-rocket", titleText: "MyPersonalBank is faster, easier to use, and has a brand new look")
         return true
