@@ -16,6 +16,7 @@
 		5D039CBB279D9FCA00F8580D /* AccountSummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D039CBA279D9FCA00F8580D /* AccountSummaryHeaderView.xib */; };
 		5D2B6BB927A15D1E008386B0 /* DecimalUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2B6BB827A15D1E008386B0 /* DecimalUtil.swift */; };
 		5D2B6BBB27A15DAC008386B0 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2B6BBA27A15DAC008386B0 /* CurrencyFormatter.swift */; };
+		5D2B6BCA27A17D9C008386B0 /* CurrencyFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2B6BC927A17D9C008386B0 /* CurrencyFormatterTests.swift */; };
 		5DA5D66E279DBC7100336340 /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA5D66D279DBC7100336340 /* AccountSummaryCell.swift */; };
 		5DE9BDB3279960570074F3C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE9BDB2279960570074F3C2 /* AppDelegate.swift */; };
 		5DE9BDB7279960570074F3C2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE9BDB6279960570074F3C2 /* LoginViewController.swift */; };
@@ -25,6 +26,16 @@
 		5DE9BDCC279AD5230074F3C2 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE9BDCB279AD5230074F3C2 /* OnboardingContainerViewController.swift */; };
 		5DE9BDCE279AE5260074F3C2 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE9BDCD279AE5260074F3C2 /* OnboardingViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5D2B6BC427A17C45008386B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DE9BDA7279960560074F3C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5DE9BDAE279960570074F3C2;
+			remoteInfo = MyPersonalBank;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5D039CAC279C1FDC00F8580D /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +47,8 @@
 		5D039CBA279D9FCA00F8580D /* AccountSummaryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSummaryHeaderView.xib; sourceTree = "<group>"; };
 		5D2B6BB827A15D1E008386B0 /* DecimalUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalUtil.swift; sourceTree = "<group>"; };
 		5D2B6BBA27A15DAC008386B0 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
+		5D2B6BC027A17C45008386B0 /* MyPersonalBankUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyPersonalBankUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D2B6BC927A17D9C008386B0 /* CurrencyFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatterTests.swift; sourceTree = "<group>"; };
 		5DA5D66D279DBC7100336340 /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
 		5DE9BDAF279960570074F3C2 /* MyPersonalBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPersonalBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DE9BDB2279960570074F3C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +62,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5D2B6BBD27A17C45008386B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5DE9BDAC279960570074F3C2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -80,6 +100,14 @@
 			path = AccountSummary;
 			sourceTree = "<group>";
 		};
+		5D2B6BC127A17C45008386B0 /* MyPersonalBankUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				5D2B6BC927A17D9C008386B0 /* CurrencyFormatterTests.swift */,
+			);
+			path = MyPersonalBankUnitTests;
+			sourceTree = "<group>";
+		};
 		5DA5D66B279DBBE200336340 /* Header */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				5DE9BDB1279960570074F3C2 /* MyPersonalBank */,
+				5D2B6BC127A17C45008386B0 /* MyPersonalBankUnitTests */,
 				5DE9BDB0279960570074F3C2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				5DE9BDAF279960570074F3C2 /* MyPersonalBank.app */,
+				5D2B6BC027A17C45008386B0 /* MyPersonalBankUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,6 +189,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5D2B6BBF27A17C45008386B0 /* MyPersonalBankUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D2B6BC627A17C45008386B0 /* Build configuration list for PBXNativeTarget "MyPersonalBankUnitTests" */;
+			buildPhases = (
+				5D2B6BBC27A17C45008386B0 /* Sources */,
+				5D2B6BBD27A17C45008386B0 /* Frameworks */,
+				5D2B6BBE27A17C45008386B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5D2B6BC527A17C45008386B0 /* PBXTargetDependency */,
+			);
+			name = MyPersonalBankUnitTests;
+			productName = MyPersonalBankUnitTests;
+			productReference = 5D2B6BC027A17C45008386B0 /* MyPersonalBankUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		5DE9BDAE279960570074F3C2 /* MyPersonalBank */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5DE9BDC32799605A0074F3C2 /* Build configuration list for PBXNativeTarget "MyPersonalBank" */;
@@ -186,6 +234,11 @@
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
+					5D2B6BBF27A17C45008386B0 = {
+						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
+						TestTargetID = 5DE9BDAE279960570074F3C2;
+					};
 					5DE9BDAE279960570074F3C2 = {
 						CreatedOnToolsVersion = 13.0;
 					};
@@ -205,11 +258,19 @@
 			projectRoot = "";
 			targets = (
 				5DE9BDAE279960570074F3C2 /* MyPersonalBank */,
+				5D2B6BBF27A17C45008386B0 /* MyPersonalBankUnitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5D2B6BBE27A17C45008386B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5DE9BDAD279960570074F3C2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -223,6 +284,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5D2B6BBC27A17C45008386B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D2B6BCA27A17D9C008386B0 /* CurrencyFormatterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5DE9BDAB279960570074F3C2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -246,6 +315,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		5D2B6BC527A17C45008386B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5DE9BDAE279960570074F3C2 /* MyPersonalBank */;
+			targetProxy = 5D2B6BC427A17C45008386B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		5DE9BDBD2799605A0074F3C2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -258,6 +335,53 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5D2B6BC727A17C45008386B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Tatiana-Dmitrieva.MyPersonalBankUnitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyPersonalBank.app/MyPersonalBank";
+			};
+			name = Debug;
+		};
+		5D2B6BC827A17C45008386B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Tatiana-Dmitrieva.MyPersonalBankUnitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyPersonalBank.app/MyPersonalBank";
+			};
+			name = Release;
+		};
 		5DE9BDC12799605A0074F3C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -429,6 +553,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5D2B6BC627A17C45008386B0 /* Build configuration list for PBXNativeTarget "MyPersonalBankUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D2B6BC727A17C45008386B0 /* Debug */,
+				5D2B6BC827A17C45008386B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5DE9BDAA279960570074F3C2 /* Build configuration list for PBXProject "MyPersonalBank" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

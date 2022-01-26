@@ -15,7 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let loginViewController = LoginViewController()
     let onboardingContainerViewController = OnboardingContainerViewController()
-    let dummyViewController = DummyViewController()
     let mainViewController = MainViewController()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptionts: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -26,12 +25,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         loginViewController.delegate = self
         onboardingContainerViewController.delegate = self
-        dummyViewController.logoutDelegate = self
         
-        window?.rootViewController = AccountSummaryViewController()
-       // window?.rootViewController = mainViewController
-        //window?.rootViewController = onboardingContainerViewController
-        //window?.rootViewController = OnboardingViewController(heroImageName: "001-rocket", titleText: "MyPersonalBank is faster, easier to use, and has a brand new look")
+        let vc = mainViewController
+        vc.setStatusBar()
+        
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().backgroundColor = appColor
+        
+        window?.rootViewController = vc
+        
         return true
     }
 }
@@ -56,7 +58,7 @@ extension AppDelegate {
 extension AppDelegate: LoginViewControllerDelegate {
     func didLogIn() {
         if LocalState.hasOnboarded {   //read from UserDefaults
-            setRootViewController(dummyViewController)
+            setRootViewController(mainViewController)
         } else {
             setRootViewController(onboardingContainerViewController)
         }
@@ -66,7 +68,7 @@ extension AppDelegate: LoginViewControllerDelegate {
 extension AppDelegate: OnboardingContainerViewControllerDelegate {
     func didFinishOnboarding() {
         LocalState.hasOnboarded = true  // write to UserDefaults
-       setRootViewController(dummyViewController)
+       setRootViewController(mainViewController)
     }
 }
 
