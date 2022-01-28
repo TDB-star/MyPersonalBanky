@@ -15,7 +15,7 @@ class AccountSummaryViewController: UIViewController {
     
     lazy var logoutBarButtonItem: UIBarButtonItem = {
         let barButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logoutTapped))
-        barButtonItem.tintColor = .label
+        barButtonItem.tintColor = .white
         return barButtonItem
     }()
     

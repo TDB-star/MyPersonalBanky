@@ -16,6 +16,8 @@ protocol LoginViewControllerDelegate: AnyObject {
 
 class LoginViewController: UIViewController {
     
+    let titleLabel = UILabel()
+    let subtitleLabel = UILabel()
     let loginView = LoginView()
     let signInButton = UIButton(type: .system)
     let errorMassageLabel = UILabel()
@@ -27,7 +29,15 @@ class LoginViewController: UIViewController {
         loginView.passwordTextField.text
     }
     
+    // animation
+    var leadingEdgeOnScreen: CGFloat = 16
+    var leadingEdgeOffScreen: CGFloat = -1000
+    
+    var titleLeadingAnchor: NSLayoutConstraint?
+    var subtitleLeadingAnchor: NSLayoutConstraint?
+    
     weak var delegate: LoginViewControllerDelegate?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +48,11 @@ class LoginViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         signInButton.configuration?.showsActivityIndicator = false
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        animate()
     }
 }
 
@@ -57,11 +72,26 @@ extension LoginViewController {
         errorMassageLabel.numberOfLines = 0
         errorMassageLabel.isHidden = true
         
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.textAlignment = .center
+        titleLabel.font = UIFont.preferredFont(forTextStyle: .largeTitle)
+        titleLabel.adjustsFontSizeToFitWidth = true
+        titleLabel.numberOfLines = 0
+        titleLabel.text = "My Prsonal Bank"
+
+        subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        subtitleLabel.textAlignment = .center
+        subtitleLabel.font = UIFont.preferredFont(forTextStyle: .title3)
+        subtitleLabel.adjustsFontSizeToFitWidth = true
+        subtitleLabel.numberOfLines = 0
+        subtitleLabel.text = "Your premium source for all things banking!"
         
         
     }
     
     private func layout() {
+        view.addSubview(titleLabel)
+        view.addSubview(subtitleLabel)
         view.addSubview(loginView)
         view.addSubview(signInButton)
         view.addSubview(errorMassageLabel)
@@ -86,7 +116,28 @@ extension LoginViewController {
             errorMassageLabel.leadingAnchor.constraint(equalTo: signInButton.leadingAnchor),
             errorMassageLabel.trailingAnchor.constraint(equalTo: signInButton.trailingAnchor)
         ])
-
+        
+        // Title label
+//        NSLayoutConstraint.activate([
+//            subtitleLabel.topAnchor.constraint(equalToSystemSpacingBelow: titleLabel.bottomAnchor, multiplier: 3),
+//            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+//        ])
+        NSLayoutConstraint.activate([
+            subtitleLabel.topAnchor.constraint(equalToSystemSpacingBelow: titleLabel.bottomAnchor, multiplier: 3),
+            titleLabel.trailingAnchor.constraint(equalTo: loginView.trailingAnchor)
+        ])
+        titleLeadingAnchor = titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingEdgeOffScreen)
+        titleLeadingAnchor?.isActive = true
+        
+        // Subtitle label
+        NSLayoutConstraint.activate([
+            loginView.topAnchor.constraint(equalToSystemSpacingBelow: subtitleLabel.bottomAnchor, multiplier: 3),
+            //subtitleLabel.leadingAnchor.constraint(equalTo: loginView.leadingAnchor),
+            subtitleLabel.trailingAnchor.constraint(equalTo: loginView.trailingAnchor)
+        ])
+        subtitleLeadingAnchor = subtitleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingEdgeOffScreen)
+        subtitleLeadingAnchor?.isActive = true
+        
     }
 }
 // MARK: Actions
@@ -103,11 +154,11 @@ extension LoginViewController {
             return
         }
         
-        if username.isEmpty || password.isEmpty {
-            configureView(withMessage: "Username / Password cannot be blank")
-            return
-        }
-        if username == "User" && password == "welcome" {
+//        if username.isEmpty || password.isEmpty {
+//            configureView(withMessage: "Username / Password cannot be blank")
+//            return
+//        }
+        if username == "" && password == "" {
             signInButton.configuration?.showsActivityIndicator = true
             delegate?.didLogIn()
         } else {
@@ -119,6 +170,22 @@ extension LoginViewController {
         errorMassageLabel.isHidden = false
         errorMassageLabel.text = message
         
+    }
+}
+
+extension LoginViewController {
+    private func animate() {
+        let animator1 = UIViewPropertyAnimator(duration: 1, curve: .easeInOut) {
+            self.titleLeadingAnchor?.constant = self.leadingEdgeOnScreen
+            self.view.layoutIfNeeded()
+        }
+        animator1.startAnimation()
+        
+        let animator2 = UIViewPropertyAnimator(duration: 1, curve: .easeInOut) {
+            self.subtitleLeadingAnchor?.constant = self.leadingEdgeOnScreen
+            self.view.layoutIfNeeded()
+        }
+        animator2.startAnimation(afterDelay: 1)
     }
 }
 
