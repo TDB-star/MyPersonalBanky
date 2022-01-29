@@ -28,6 +28,8 @@
 		5DE9BDC9279968080074F3C2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE9BDC8279968080074F3C2 /* LoginView.swift */; };
 		5DE9BDCC279AD5230074F3C2 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE9BDCB279AD5230074F3C2 /* OnboardingContainerViewController.swift */; };
 		5DE9BDCE279AE5260074F3C2 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE9BDCD279AE5260074F3C2 /* OnboardingViewController.swift */; };
+		5DFFC2C027A4403800CD84EE /* Date+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFFC2BF27A4403800CD84EE /* Date+Util.swift */; };
+		5DFFC2C227A44FE000CD84EE /* AccountSummaryViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFFC2C127A44FE000CD84EE /* AccountSummaryViewController+Networking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		5DE9BDC8279968080074F3C2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		5DE9BDCB279AD5230074F3C2 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		5DE9BDCD279AE5260074F3C2 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		5DFFC2BF27A4403800CD84EE /* Date+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Util.swift"; sourceTree = "<group>"; };
+		5DFFC2C127A44FE000CD84EE /* AccountSummaryViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountSummaryViewController+Networking.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 				5D039CAF279C394E00F8580D /* LocalState.swift */,
 				5D2B6BBA27A15DAC008386B0 /* CurrencyFormatter.swift */,
 				5D2B6BCB27A19D2F008386B0 /* NSNotificationName.swift */,
+				5DFFC2BF27A4403800CD84EE /* Date+Util.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -102,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				5D039CB6279D99C500F8580D /* AccountSummaryViewController.swift */,
+				5DFFC2C127A44FE000CD84EE /* AccountSummaryViewController+Networking.swift */,
 				5DA5D66B279DBBE200336340 /* Header */,
 				5DA5D66C279DBC3C00336340 /* Cells */,
 			);
@@ -328,8 +334,10 @@
 				5DE9BDCE279AE5260074F3C2 /* OnboardingViewController.swift in Sources */,
 				5D039CB4279C4BB800F8580D /* MainViewController.swift in Sources */,
 				5D039CB7279D99C500F8580D /* AccountSummaryViewController.swift in Sources */,
+				5DFFC2C027A4403800CD84EE /* Date+Util.swift in Sources */,
 				5DE9BDB3279960570074F3C2 /* AppDelegate.swift in Sources */,
 				5DE9BDCC279AD5230074F3C2 /* OnboardingContainerViewController.swift in Sources */,
+				5DFFC2C227A44FE000CD84EE /* AccountSummaryViewController+Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
