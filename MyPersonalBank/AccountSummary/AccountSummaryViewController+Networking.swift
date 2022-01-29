@@ -5,24 +5,11 @@
 //  Created by Tatiana Dmitrieva on 28/01/2022.
 //
 
-import Foundation
 import UIKit
 
 enum NetworkError: Error {
     case serverError
     case decodingError
-}
-
-struct Profile: Codable {
-    let id: String
-    let firstName: String
-    let lastName: String
-    
-    enum CodingKeys: String, CodingKey {
-        case id
-        case firstName = "first_name"
-        case lastName = "last_name"
-    }
 }
 
 extension AccountSummaryViewController {
@@ -45,14 +32,6 @@ extension AccountSummaryViewController {
             }
         }.resume()
     }
-}
-
-struct Account: Codable {
-    let id: String
-    let type: AccountType
-    let name: String
-    let amount: Decimal
-    let createdDateTime: Date
 }
 
 extension AccountSummaryViewController {

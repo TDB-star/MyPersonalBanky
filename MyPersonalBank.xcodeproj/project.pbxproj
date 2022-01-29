@@ -21,6 +21,9 @@
 		5D2B6BCE27A2E7C2008386B0 /* UITextField+SecureToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2B6BCD27A2E7C2008386B0 /* UITextField+SecureToggle.swift */; };
 		5D2B6BD127A30E6D008386B0 /* ShakeyBellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2B6BD027A30E6D008386B0 /* ShakeyBellView.swift */; };
 		5DA5D66E279DBC7100336340 /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA5D66D279DBC7100336340 /* AccountSummaryCell.swift */; };
+		5DA84BAD27A5740000DA3536 /* ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA84BAC27A5740000DA3536 /* ProfileTests.swift */; };
+		5DA84BAF27A576DB00DA3536 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA84BAE27A576DB00DA3536 /* Models.swift */; };
+		5DA84BB127A578D400DA3536 /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA84BB027A578D400DA3536 /* AccountTests.swift */; };
 		5DE9BDB3279960570074F3C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE9BDB2279960570074F3C2 /* AppDelegate.swift */; };
 		5DE9BDB7279960570074F3C2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE9BDB6279960570074F3C2 /* LoginViewController.swift */; };
 		5DE9BDBC2799605A0074F3C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DE9BDBB2799605A0074F3C2 /* Assets.xcassets */; };
@@ -58,6 +61,9 @@
 		5D2B6BCD27A2E7C2008386B0 /* UITextField+SecureToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+SecureToggle.swift"; sourceTree = "<group>"; };
 		5D2B6BD027A30E6D008386B0 /* ShakeyBellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeyBellView.swift; sourceTree = "<group>"; };
 		5DA5D66D279DBC7100336340 /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
+		5DA84BAC27A5740000DA3536 /* ProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTests.swift; sourceTree = "<group>"; };
+		5DA84BAE27A576DB00DA3536 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		5DA84BB027A578D400DA3536 /* AccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
 		5DE9BDAF279960570074F3C2 /* MyPersonalBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPersonalBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DE9BDB2279960570074F3C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DE9BDB6279960570074F3C2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				5D039CB1279C4B3700F8580D /* UIViewController+Utils.swift */,
+				5DA84BAE27A576DB00DA3536 /* Models.swift */,
 				5D2B6BB827A15D1E008386B0 /* Decimal+Util.swift */,
 				5D2B6BCD27A2E7C2008386B0 /* UITextField+SecureToggle.swift */,
 				5D039CAF279C394E00F8580D /* LocalState.swift */,
@@ -117,6 +124,7 @@
 		5D2B6BC127A17C45008386B0 /* MyPersonalBankUnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				5DA84BAB27A5737C00DA3536 /* AccountSummary */,
 				5D2B6BC927A17D9C008386B0 /* CurrencyFormatterTests.swift */,
 			);
 			path = MyPersonalBankUnitTests;
@@ -145,6 +153,15 @@
 				5DA5D66D279DBC7100336340 /* AccountSummaryCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		5DA84BAB27A5737C00DA3536 /* AccountSummary */ = {
+			isa = PBXGroup;
+			children = (
+				5DA84BAC27A5740000DA3536 /* ProfileTests.swift */,
+				5DA84BB027A578D400DA3536 /* AccountTests.swift */,
+			);
+			path = AccountSummary;
 			sourceTree = "<group>";
 		};
 		5DE9BDA6279960560074F3C2 = {
@@ -312,6 +329,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D2B6BCA27A17D9C008386B0 /* CurrencyFormatterTests.swift in Sources */,
+				5DA84BB127A578D400DA3536 /* AccountTests.swift in Sources */,
+				5DA84BAD27A5740000DA3536 /* ProfileTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +357,7 @@
 				5DE9BDB3279960570074F3C2 /* AppDelegate.swift in Sources */,
 				5DE9BDCC279AD5230074F3C2 /* OnboardingContainerViewController.swift in Sources */,
 				5DFFC2C227A44FE000CD84EE /* AccountSummaryViewController+Networking.swift in Sources */,
+				5DA84BAF27A576DB00DA3536 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
