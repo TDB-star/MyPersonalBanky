@@ -26,6 +26,8 @@
 		5DA84BB127A578D400DA3536 /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA84BB027A578D400DA3536 /* AccountTests.swift */; };
 		5DA84BB327A70F8100DA3536 /* SkeletonLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA84BB227A70F8100DA3536 /* SkeletonLoadable.swift */; };
 		5DA84BB527A7108400DA3536 /* SkeletonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA84BB427A7108400DA3536 /* SkeletonCell.swift */; };
+		5DE5A84327A87EE3005E99E2 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE5A84227A87EE3005E99E2 /* ProfileManager.swift */; };
+		5DE5A84527A882D0005E99E2 /* AccountSummaryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE5A84427A882D0005E99E2 /* AccountSummaryViewControllerTests.swift */; };
 		5DE9BDB3279960570074F3C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE9BDB2279960570074F3C2 /* AppDelegate.swift */; };
 		5DE9BDB7279960570074F3C2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE9BDB6279960570074F3C2 /* LoginViewController.swift */; };
 		5DE9BDBC2799605A0074F3C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DE9BDBB2799605A0074F3C2 /* Assets.xcassets */; };
@@ -68,6 +70,8 @@
 		5DA84BB027A578D400DA3536 /* AccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
 		5DA84BB227A70F8100DA3536 /* SkeletonLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonLoadable.swift; sourceTree = "<group>"; };
 		5DA84BB427A7108400DA3536 /* SkeletonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonCell.swift; sourceTree = "<group>"; };
+		5DE5A84227A87EE3005E99E2 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
+		5DE5A84427A882D0005E99E2 /* AccountSummaryViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewControllerTests.swift; sourceTree = "<group>"; };
 		5DE9BDAF279960570074F3C2 /* MyPersonalBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPersonalBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DE9BDB2279960570074F3C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DE9BDB6279960570074F3C2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 		5D039CB5279D999100F8580D /* AccountSummary */ = {
 			isa = PBXGroup;
 			children = (
+				5DE5A84127A87EC4005E99E2 /* Networking */,
 				5D039CB6279D99C500F8580D /* AccountSummaryViewController.swift */,
 				5DFFC2C127A44FE000CD84EE /* AccountSummaryViewController+Networking.swift */,
 				5DA5D66B279DBBE200336340 /* Header */,
@@ -166,8 +171,17 @@
 			children = (
 				5DA84BAC27A5740000DA3536 /* ProfileTests.swift */,
 				5DA84BB027A578D400DA3536 /* AccountTests.swift */,
+				5DE5A84427A882D0005E99E2 /* AccountSummaryViewControllerTests.swift */,
 			);
 			path = AccountSummary;
+			sourceTree = "<group>";
+		};
+		5DE5A84127A87EC4005E99E2 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				5DE5A84227A87EE3005E99E2 /* ProfileManager.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		5DE9BDA6279960560074F3C2 = {
@@ -337,6 +351,7 @@
 				5D2B6BCA27A17D9C008386B0 /* CurrencyFormatterTests.swift in Sources */,
 				5DA84BB127A578D400DA3536 /* AccountTests.swift in Sources */,
 				5DA84BAD27A5740000DA3536 /* ProfileTests.swift in Sources */,
+				5DE5A84527A882D0005E99E2 /* AccountSummaryViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +365,7 @@
 				5D2B6BB927A15D1E008386B0 /* Decimal+Util.swift in Sources */,
 				5D2B6BCE27A2E7C2008386B0 /* UITextField+SecureToggle.swift in Sources */,
 				5D039CB9279D9F6B00F8580D /* AccountSummaryHeaderView.swift in Sources */,
+				5DE5A84327A87EE3005E99E2 /* ProfileManager.swift in Sources */,
 				5D2B6BBB27A15DAC008386B0 /* CurrencyFormatter.swift in Sources */,
 				5D039CAD279C1FDC00F8580D /* DummyViewController.swift in Sources */,
 				5D2B6BCC27A19D2F008386B0 /* NSNotificationName.swift in Sources */,
